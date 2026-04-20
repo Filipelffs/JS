@@ -1,0 +1,98 @@
+//Tipos de saída de escrita no JavaScrip(JS)
+
+
+    //usa o ID no html e passa a mensagem no JS
+
+        document.getElementById("").innerHTML="";
+
+    //usa o <script> no html e passa a mensagem ou operação com números
+
+        document.write();
+
+    //Caixa de texto
+
+        alert("");
+
+    //Parecido com alert mas é mais silecioso(Aparece na parte console do F12 da página)
+
+        console.log();
+
+
+
+
+//Variáveis
+
+
+    /*var(Variavel que pode ser redeclarada) pode atribuir valores as palavras, tanto str quanto numeros e
+    realizar soma entre eles,tendo as suas regras para isso. coringa*/
+
+        var a,b,c;                      var nome,sobrenome,completo;
+        a=3;                            nome="Filipe"            
+        b=2;                            sobrenome="Lopes"    
+        c=a+b;                          completo=nome + " " + sobrenome
+
+    //let(Variável única) não pode ter seu valor reatribuido por outro let dentro do seu bloco. É o mais usado.
+
+        let a="JOAO"
+        let a="VICTOR"
+        XXXX//Erro
+
+    /*const(não pode mudar) não pode ter seu valor reatribuido por outro const, independente do bloco que 
+    estiver vai ser o primeiro que vai ser pego. Mais restrito.*/
+
+        const c = 3
+        //bloco de código
+        {
+            const c =1
+        }   
+        //c = 3
+
+
+
+
+//Operadores
+
+
+    // Operadores Aritméticos(+,-,*,/,++,--): Matemáticos, encremento e decremento.
+
+        a+b; a-b; a*b; a/b; a = ++b; --a;
+    
+    // Operadores de Atribuição(=,+=,-=,*=,/=)
+    
+        a = b * c; a += b; a -= b; a *= b; a /= b;
+    
+    // Operadores de Sequência(+ para textos)
+
+        var p1,p2, TOTAL;
+        p1= "FILIPE";   
+        p2= "LOPES";  
+        TOTAL = p1 + p2;
+
+    // Operadores Comparação(==,===,!=): Faz comparações entre os valores
+
+        
+        var l1,l2,l3;              var l1,l2,l3;                        var l1,l2,l3;
+        l1=4;                      l1=4;                                l1=4;
+        l2=3;                      l2=3;                                l2=3;
+        l3=(l1 == l2);             l3=(l1 === l2);                      l3=(l1 != l2);
+        //true ou false         //true se for o mesmo numero e          //true ou false pela diferença
+        //se for igual          //pertencer a mesma classe(str ou num)
+
+    // Operadores Condicional e ternario(<,>,<=,>=)
+
+        var n1,n2,n3;              var n1,n2,n3;                var idade, eleitor;
+        n1=2;                      n1=2;                        idade=18;
+        n2=3;                      n2=3;                        eleitor = (idade < 18) ? "Não, Eleitor" : "Sim, Eleitor"
+        n3=(n1 </*ou*/> n2);       n3=(n1 <=/*ou*/=> n2);
+
+    // Operadores Lógicos(&&,||,!)
+
+        
+        resultado1 = (idad > 60 && idad < 70); //e
+        resultado2 = (idad > 10 || idad < 70); //ou
+        resultado3 = !(idad === 14); //negação 
+        resultado4 = (idad === 18 && idad === 70); //e especifico
+        resultado5 = (idad === 18 || idad === 70); //ou especifico
+
+
+    
