@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+</head>
+
+<body>
+    <h1>Testes</h1>
+    
+    Nome:<input type="text" id="nome"><br><br>
+    pai:<input type="text" id="pai"><br><br>
+    mae:<input type="text" id="mae"><br><br>
+    <button onclick="Status()">Enviar</button>
+    
+    <p id="resultado"></p>
+    <p id="resultado1"></p>
+    <p id="resultado2"></p>
+
+
+    <script>
+
+        
+        function Status() {
+            let status = document.getElementById("nome").value;
+            document.getElementById("resultado").innerHTML = "Nome: " + status;
+            let status1 = document.getElementById("pai").value;
+            document.getElementById("resultado1").innerHTML = "Nome do pai: " + status1;
+            let status2 = document.getElementById("mae").value;
+            document.getElementById("resultado2").innerHTML = "Nome da mae: " + status2;
+
+        }
+
+    </script>
+
+</body>
+
+</html>
