@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<head>
+<title>Atividade 2</title>
+</head>
+<body>
+    <h2>Boas vindas</h2>
+    
+    nome<input type="text" id = "nome"><br>
+    idade<input type="number" id = "idade">
+    <br>
+    <button onclick="mostrar()">Enviar</button>
+
+    <p id="resultado"></p>
+
+    <script>
+        function mostrar(){
+            let nome = document.getElementById("nome").value;
+            let idade = document.getElementById("idade").value;
+            document.getElementById("resultado"). innerHTML = "olá " + nome + "!" + " Você tem " + idade + " anos";
+        }
+    </script>
+</body>
+</html>
