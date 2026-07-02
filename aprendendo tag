@@ -170,58 +170,64 @@
 
         //Onclick(disparado quando clicado)
         
-        
+        ///um click no butao pra disparar a função
 
         //Ondblclick
 
-
+        ///dois clicks no butao pra disparar a função
 
         //onmouseover
 
-
+        ///se passa o mouse por cima do elemento pra disparar a função
 
         //onmouseout
 
-
+        ///acionado quando o mouse sai do elemento
         
         //onmousemove
         
-
+        ///disparado quando o mouse se move dentro do elemento
 
         //onmousedown
 
+        ///disparado quando o botão do mouse é pressionado sobre o elemento
+        ///(ativa assim que pressionado, não precisa soltar)
 
+        //onmouseup
 
-        //onmouseuo
-
-
+        ///disparado quando o botão do mouse é liberado sobre o elemento(ativa assim que solto)
 
         //onfocus
 
-
+        ///disparado quando o elemento recebe foco, como um campo de texto ou 
+        ////botão ou link, por exemplo. (ativa assim que clicado com mouse ou tab)
 
         //onchange
 
-
+        ///disparado quando o valor de um elemento é alterado, como um campo de texto ou
+        ///uma caixa de seleção. (ativa assim que o valor é alterado e o elemento perde o foco)
         
         //onblur
 
-
+        ///disparado quando o elemento perde o foco, como um campo de texto ou botão. 
+        ///(ativa assim que clicado fora do elemento)
 
         //onkeydown
 
-
+        ///acionado quando o usuário pressiona uma tecla, mesmo que não gere um caractere imprimível
 
         //onkeypress
 
-
+        ///acionado quando o usuário pressiona uma tecla que gera um caractere imprimível
 
         //onkeyup
 
-
-
+        ///acionado quando o usuário libera uma tecla que foi pressionada
+        
         //onload
 
-
+        ///disparado quando a página ou um elemento é carregado, como uma imagem ou um script.
 
         //onresize
+
+        ///acionado quando a janela do navegador é redimensionada.
