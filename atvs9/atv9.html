@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Validação de Cadastro</title>
+
+<style>
+    body{
+        font-family: Arial, sans-serif;
+        margin: 30px;
+    }
+
+    input{
+        display: block;
+        width: 300px;
+        padding: 8px;
+        margin-bottom: 10px;
+        border: 2px solid #ccc;
+        border-radius: 5px;
+    }
+
+    .erro{
+        border-color: red;
+    }
+
+    .sucesso{
+        border-color: green;
+    }
+
+    #mensagem{
+        font-weight: bold;
+        margin-top: 15px;
+    }
+</style>
+
+</head>
+<body>
+
+<h2>Cadastro</h2>
+
+<form id="formulario">
+
+    <label>Nome:</label>
+    <input type="text" id="nome">
+
+    <label>E-mail:</label>
+    <input type="email" id="email">
+
+    <label>Senha:</label>
+    <input type="password" id="senha">
+
+    <label>Confirmar Senha:</label>
+    <input type="password" id="confirmar">
+
+    <button type="submit">Cadastrar</button>
+
+</form>
+
+<p id="mensagem"></p>
+
+<script>
+
+document.getElementById("formulario").addEventListener("submit", function(event){
+
+    event.preventDefault();
+
+    let nome = document.getElementById("nome");
+    let email = document.getElementById("email");
+    let senha = document.getElementById("senha");
+    let confirmar = document.getElementById("confirmar");
+    let mensagem = document.getElementById("mensagem");
+
+    let valido = true;
+
+    mensagem.innerHTML = "";
+    mensagem.style.color = "red";
+
+    [nome, email, senha, confirmar].forEach(campo => {
+        campo.classList.remove("erro", "sucesso");
+    });
+
+    if(nome.value.trim() == ""){
+        nome.classList.add("erro");
+        mensagem.innerHTML += "Preencha o nome.<br>";
+        valido = false;
+    }else{
+        nome.classList.add("sucesso");
+    }
+
+    if(email.value.trim() == ""){
+        email.classList.add("erro");
+        mensagem.innerHTML += "Preencha o e-mail.<br>";
+        valido = false;
+    }else{
+        email.classList.add("sucesso");
+    }
+
+    if(senha.value.length < 8){
+        senha.classList.add("erro");
+        mensagem.innerHTML += "A senha deve possuir pelo menos 8 caracteres.<br>";
+        valido = false;
+    }else{
+        senha.classList.add("sucesso");
+    }
+
+    if(confirmar.value != senha.value){
+        confirmar.classList.add("erro");
+        mensagem.innerHTML += "As senhas não coincidem.<br>";
+        valido = false;
+    }else if(confirmar.value != ""){
+        confirmar.classList.add("sucesso");
+    }
+
+    if(valido){
+        mensagem.style.color = "green";
+        mensagem.innerHTML = "Cadastro realizado com sucesso!";
+    }
+
+});
+
+</script>
+
+</body>
+</html>
